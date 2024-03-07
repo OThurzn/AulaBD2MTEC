@@ -45,3 +45,14 @@ create table aloca(
    foreign key (Nchassi) references carro(Nchassi),
    foreign key (CNH) references usuario(CNH)
 	);
+	
+create table manutencao(
+	codManutencao integer not null primary key,
+	valor integer not null,
+	dia date not null,
+	descricao varchar(70) not null, 
+	Nchassi integer not null,
+	cnpj integer not null,
+   foreign key (Nchassi) references carro(Nchassi),
+   foreign key (cnpj) references oficina(cnpj)
+	);
