@@ -39,3 +39,13 @@ update funcionario set cidade = 'Valinhos' where cidade = 'Itu';
 update funcionario set cargos='AI', salario='1100'  where cidade= 'Valinhos';
 update funcionario set cargos='PC', salario='1700'  where cidade= 'Campinas';
 update funcionario set cargos='TI', salario='750'  where cidade= 'Jundiai';
+
+select nome, salario*1.30 from funcionario;
+select nome, salario*0.80 from funcionario where cidade= 'Campinas';
+select nome, salario from funcionario where salario>1500;
+select nome, cidade from funcionario where not cidade = 'Valinhos';
+select idfuncionario, cidade from funcionario where cidade = 'Valinhos' or  cidade =  'Campinas';
+select idfuncionario, cargos, salario from funcionario where not cidade = 'São Paulo' and salario>=1000;
+select nome from funcionario where cargo is null;
+select nome, salario from funcionario where salario between 500 and 1500;
+select nome, email from funcionario where email ='%hotmail' 
